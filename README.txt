@@ -1,0 +1,1 @@
+TO RUN THIS CODE PROPERLY, ‘async’ & ‘fs’ REQUIRED
