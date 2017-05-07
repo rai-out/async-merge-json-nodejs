@@ -15,10 +15,9 @@ async.forEachOf(bothPeople, function (value, key, callback) {
   })
 }, function (err) {
 	  if (err) console.error(err.message);
-	  // configs is now a map of JSON data
-	  // doSomethingWith(configs);
-		fs.writeFile('bothPeopleMerged.txt', `${configs.people1},${configs.people2}`, function (err) {
+	  // configs is now a map of JSON data, doSomethingWith(configs);
+		fs.writeFile('bothPeopleMerged.txt', `${configs.people1.sort()},${configs.people2.sort()}`, function (err) {
 		  if (err) return console.log(err);
 		  console.log('Finished Writing File');
 		});
-})
+});
